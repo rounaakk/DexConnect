@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1533095718",
+    "firebase_url": "https://dexconnect-ron.firebaseio.com",
+    "project_id": "dexconnect-ron",
+    "storage_bucket": "dexconnect-ron.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1533095718:android:731d89939cdaa43b4d1be7",
+        "android_client_info": {
+          "package_name": "com.example.dexconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1533095718-fkak7u597do16gn0rq0r3rgo56pgk5v9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dexconnect",
+            "certificate_hash": "87c7a601e0e6200d38ca96e7f9d016cea48c34a7"
+          }
+        },
+        {
+          "client_id": "1533095718-eqh4c10kum7tfshp7541pfun4mkm59dc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyej838c_YGJbQ6JEoOvlHmjojtkOwrcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1533095718-eqh4c10kum7tfshp7541pfun4mkm59dc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
