@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView mDexList;
@@ -35,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDexList = findViewById(R.id.myRecyclerView);
-        mDexList.setLayoutManager(new LinearLayoutManager(this));
+
+        StaggeredGridLayoutManager staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL);
+
+        mDexList.setLayoutManager(staggeredGridLayoutManager);
 
         FirebaseRecyclerOptions<Cards> options =
                 new FirebaseRecyclerOptions.Builder<Cards>()
@@ -47,14 +51,17 @@ public class MainActivity extends AppCompatActivity {
         adapter = new CardsAdapter(options);
         mDexList.setAdapter(adapter);
 
+
+
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
 
                 if (user != null) {
+//
+//                    Toast.makeText(MainActivity.this, "You are Signed in", Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(MainActivity.this, "You are Signed in", Toast.LENGTH_SHORT).show();
                 } else {
 
 
@@ -78,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         };
+
     }
 
 
@@ -89,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (resultCode==RESULT_OK)
             {
-                Toast.makeText(this, "You are Signed in", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "You are Signed in", Toast.LENGTH_SHORT).show();
             }
             else if (resultCode==RESULT_CANCELED)
             {
